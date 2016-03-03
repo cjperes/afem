@@ -1,15 +1,18 @@
 @echo off
 mode con: lines=20
 color 0F
+
 rem Implementar dps os Hiperlinks
 rem set /p link1=Digite o HIPERLINK para a primeira imagem:
+
+
 cls
 title AFEM - Auto Formatting Email Marketing
-echo Script para formatação de e-mail marketing - joedev.org
+echo Script para formataÃ§Ã£o de e-mail marketing - joedev.com.br
 echo=================================================================
-echo             BBCREATIVE.ORG
+echo             v.BBCREATIVE.ORG
 echo.
-echo Instruções:
+echo InstruÃ§Ãµes:
 echo.
 echo * Fatie sua imagem em 4 ou 5 partes
 echo * Hospede as imagens em nosso servidor (up.bbcreative.org)
@@ -18,7 +21,7 @@ echo.
 pause
 goto sets
 
-:: seleção var
+:: seleÃ§Ã£o var
 :sets
 cls
 color 0F
@@ -38,17 +41,18 @@ set /p img4=Digite o Link da quarta imagem:
 if not defined img3 goto erro
 cls
 set /p img5=Digite o Link da quinta imagem:
-:: nesta parte possibilito a opção de deixar apenas 4 imagens
+:: nesta parte possibilito a opÃ§Ã£o de deixar apenas 4 imagens
 if not defined img5 goto 4
 cls
 goto script
 
-:: Essa parte teve contribuição do forum Batch-Satti
+:: Essa parte teve contribuiÃ§Ã£o do forum Batch-Satti
 :script
 cls
 
 
 :5
+cls
 	for /f "delims=: tokens=2" %%a in ('chcp') do set "restore_codepage=%%a"
 	chcp 1252>NUL
 	set "z=%~dpn0.htm"
@@ -79,6 +83,7 @@ echo.
 goto fim
 
 :4
+cls
 
 	for /f "delims=: tokens=2" %%a in ('chcp') do set "restore_codepage=%%a"
 	chcp 1252>NUL
@@ -120,5 +125,6 @@ goto sets
 
 
 :fim
+cls
 echo Arquivo gerado com sucesso...
 ping -n 3 127.0.0.1>nul
